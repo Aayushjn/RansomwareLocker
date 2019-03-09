@@ -3,4 +3,4 @@ project(RansomwareLocker C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(RansomwareLocker src/honeyfile.c)
+add_executable(RansomwareLocker src/honeyfile.c src/read_pair_process.c)
