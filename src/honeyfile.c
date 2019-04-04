@@ -6,9 +6,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define FILE_PATH "/trap_pipe.py"
+#define FILE_PATH "/home/trap.py"
 
-int main() {    
+int main() {
     int fd;
 
     // Create pipe
@@ -26,11 +26,12 @@ int main() {
         perror("Error while opening file for writing!");
         return 2;
     }
-    if (write(fd, "0", strlen("0")) < 0) {
-        close(fd);
-        perror("Error writing data to file!\n");
-        return 4;
-    }
+    for (int i = 0 ; i < 100000 ; i++)
+        if (write(fd, "0", strlen("0")) < 0) {
+            close(fd);
+            perror("Error writing data to file!\n");
+            return 4;
+        }
 
     close(fd);
 

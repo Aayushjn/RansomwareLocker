@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#define FILE_PATH "/trap_pipe.py"
+#define FILE_PATH "/home/aayush/aa.pdf"
 
 int main() {
     int fd;
