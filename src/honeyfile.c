@@ -6,7 +6,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define FILE_PATH "/home/trap.py"
+#define FILE_PATH "/home/aayush/trap.py"
 
 int main() {
     int fd;
