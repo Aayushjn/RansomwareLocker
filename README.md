@@ -27,6 +27,6 @@ To install the additional utilities, refer to the following:
 * `yum install auditd` on RedHat
 
 This tool was used against [bash-ransomware](https://www.github.com/SubtleScope/bash-ransomware), an open-source Linux 
-ransomware (on a system running Ubuntu 16.04.2 64-bit), which gave promising results.
+ransomware (on a system running Ubuntu 16.04.6 64-bit), which gave promising results.
 
 The technique was inspired by [this paper](https://www.sciencedirect.com/science/article/pii/S0167404817302560).
