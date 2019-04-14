@@ -9,7 +9,7 @@ sudo ln -s $HOME/.aa.pdf /sbin/.aa.pdf
 sudo ln -s $HOME/.aa.pdf /usr/.aa.pdf
 sudo ln -s $HOME/.aa.pdf /.aa.pdf
 
-sudo /sbin/auditctl -w /home/aayush/aa.pdf -p war
+sudo /sbin/auditctl -w $HOME/.aa.pdf -p war
 
 while inotifywait -q -e access,attrib,close,open,modify $HOME/.aa.pdf; do
 	sudo /sbin/ausearch -f $HOME/.aa.pdf | more | grep -o ' pid=[0-9]* ' | grep -v 'grep' | sed 's/\ pid=//' | tr '\n' ' ' | xargs sudo kill -9 > /dev/null 2>&1
